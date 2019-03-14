@@ -8,7 +8,7 @@
 import MovieItem from "./MovieItem";
 export default {
   name: "MoviesList",
-  components: [MovieItem],
+  components: { MovieItem },
   data() {
     return {
       movies: [

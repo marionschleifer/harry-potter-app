@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @submit="submit">
     <fieldset>
       <input type="text" placeholder="Title" v-model="title">
       <input type="text" placeholder="Director" v-model="director">
@@ -18,6 +18,12 @@ export default {
       director: "",
       composer: ""
     };
+  },
+  methods: {
+    submit(e) {
+      e.preventDefault();
+      alert(this.$data.title);
+    }
   }
 };
 </script>
