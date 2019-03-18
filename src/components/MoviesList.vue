@@ -6,21 +6,32 @@
 
 <script>
 import MovieItem from "./MovieItem";
+import gql from "graphql-tag";
+
+const GET_MOVIES = gql`
+  query getMovies {
+    movies {
+      id
+      title
+      director
+      composer
+      release_date
+    }
+  }
+`;
+
 export default {
   name: "MoviesList",
   components: { MovieItem },
   data() {
     return {
-      movies: [
-        {
-          id: "123123123",
-          title: "Harry Potter and the Order of the Phoenix",
-          director: "David Yates",
-          composer: "Nicholas Hopper",
-          timestamp: "123123123"
-        }
-      ]
+      movies: []
     };
+  },
+  apollo: {
+    movies: {
+      query: GET_MOVIES
+    }
   }
 };
 </script>
