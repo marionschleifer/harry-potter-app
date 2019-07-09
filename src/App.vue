@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img id="logo" alt="Vue logo" src="./assets/harry_potter.jpeg">
     <add-movie/>
     <movies-list/>
   </div>
@@ -27,5 +27,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#logo {
+  width: 400px;
+  margin-bottom: 50px;
 }
 </style>

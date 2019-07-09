@@ -58,7 +58,7 @@ export default {
         variables: {
           title,
           director,
-          composer,
+          composer, 
           release_date
         },
         refetchQueries: ["getMovies"]
